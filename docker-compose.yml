@@ -1,0 +1,13 @@
+version: '3'
+services:
+  python3:
+    restart: always
+    build: .
+    ports:  
+    - "8888:8888"
+    container_name: 'python3-kuzushiji'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./opt:/code
+      - ./:/repo
